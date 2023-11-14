@@ -107,38 +107,38 @@
     margin: 0 var(--margin-xs);
   }
   
-  .posts header {
+  .events header {
     margin: var(--margin) 0 0;
     display: flex;
     align-items: center;
   }
   
-  .posts header h2 {
+  .events header h2 {
     margin: 0;
     font-size: 32px;
   }
   
-  .posts header nav {
+  .events header nav {
     margin-left: auto;
   }
   
-  .posts header button {
+  .events header button {
     border: 0;
     background: transparent;
     cursor: pointer;
     opacity: .8;
   }
   
-  .posts header button:hover {
+  .events header button:hover {
     opacity: 1;
   }
   
-  .posts header button svg {
+  .events header button svg {
     width: 22px;
     height: 22px;
     fill: #777;
   }
   
-  .posts p {
+  .events p {
     margin: 5px 0 0;
   }

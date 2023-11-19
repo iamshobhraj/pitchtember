@@ -4,26 +4,11 @@ import {readProfileById} from "@/app/dashboard/actions";
 import {useForm} from "react-hook-form";
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import Image from 'next/image'
 
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
+
 import {toast} from "@/components/ui/use-toast";
 
-const FormSchema = z.object({
-    name: z.string(),
-    username:z.string(),
-    city:z.string()
-});
 
 
 export default function Profile({session}) {
@@ -60,26 +45,8 @@ export default function Profile({session}) {
         getProfile();
     }, [user, getProfile])
 
-    const form = useForm<z.infer<typeof FormSchema>>({
-        resolver: zodResolver(FormSchema),
-        defaultValues: {
-            name: "",
-            username: "",
-            city:"",
-        },
-    });
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast({
-            title: "You are successfully create todo.",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-					<code className="text-white">user updated</code>
-				</pre>
-            ),
-        });
-        form.reset();
-    }
+    
 
     function editing() {
         setUpdating(true);
@@ -88,7 +55,7 @@ export default function Profile({session}) {
     return(
         <div className={'grid grid-cols-3'}>
             <div className={'col-span-1'}>
-                <img className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={avatar_url} alt="avatar" />
+                <Image className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={avatar_url} alt="avatar" />
             </div>
             <div className={'col-span-2 items-center'}>
                 <div className={'gap-2'}>

@@ -29,7 +29,7 @@ export default async function Page() {
           </Image>
           <div className='flex flex-col'>
 
-            <div className='md:text-3xl font-bold w-full text-center '>"Connect Beyond Screens: Your Events, Your Way-Create,Join,Enjoy Offline Experiences Together!"</div>
+            <div className='md:text-3xl font-bold w-full text-center '>Connect Beyond Screens: Your Events, Your Way-Create,Join,Enjoy Offline Experiences Together!</div>
             <Image
                 src="/event2.png"
                 height={500}

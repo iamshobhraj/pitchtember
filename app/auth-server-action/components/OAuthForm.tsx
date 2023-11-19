@@ -15,7 +15,7 @@ export default function OAuthForm() {
 		supabase.auth.signInWithOAuth({
 			provider:"google",
 			options:{
-				redirectTo:`/auth-server-action/callback`
+				redirectTo:`${location.origin}/auth-server-action/callback`
 			}
 		})
 	}

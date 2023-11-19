@@ -55,7 +55,7 @@ export default function Profile({session}: {session:any}) {
     return(
         <div className={'grid grid-cols-3'}>
             <div className={'col-span-1'}>
-                <Image className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={avatar_url} alt="avatar" />
+                <Image className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={avatar_url} alt="avatar" height={100} width={100} />
             </div>
             <div className={'col-span-2 items-center'}>
                 <div className={'gap-2'}>

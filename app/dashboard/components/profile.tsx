@@ -11,7 +11,7 @@ import {toast} from "@/components/ui/use-toast";
 
 
 
-export default function Profile({session}) {
+export default function Profile({session}: {session:any}) {
 
     const [loading,setLoading] = useState(true)
     const [fullname, setFullname] = useState("")

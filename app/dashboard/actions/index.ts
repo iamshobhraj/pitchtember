@@ -1,8 +1,17 @@
 "use server";
 
 import createSupabaseServerClient from "@/lib/supabase/server";
+import readUserSession from "@/lib/actions";
 
-export async function readProfileById(id:string) {
+export default async function getUser() {
+    const {data} = await readUserSession();
+    return data.session?.user
+}
+
+
+export async function readProfileById() {
+    const user = await getUser();
+    const id = user?.id;
     const supabase = await createSupabaseServerClient();
 
     const {data} = await supabase

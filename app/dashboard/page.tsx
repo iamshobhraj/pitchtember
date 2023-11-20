@@ -12,7 +12,7 @@ export default async function Page() {
     // }
 
     return (
-        <main className={'p-36 bg-white h-screen'}>
+        <main className={'p-36 bg-white h-screen flex flex-col gap-6'}>
             <SignOut />
             <div className={'rounded-2xl h-full'}>
                 <Profile session={data.session}></Profile>

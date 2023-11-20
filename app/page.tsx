@@ -14,8 +14,8 @@ export default async function Page() {
       <main className = "bg-gradient-to-r from-black via-blue-900 to-blue-200 w-screen h-screen">
         <div className="flex justify-between bg-opacity-5">
           <div>XYZ</div>
-          <div className='flex md:justify-around md:w-1/6 w-2/5 justify-evenly'><Link href={"/auth-server-action"} className='bg-black mx-2 px-2 rounded-xl text-blue-600 hover:bg-slate-500'>Sign Up</Link>
-            <Link href={"/auth-server-action"} className='bg-black px-2 rounded-xl text-blue-400 hover:bg-slate-500'>Login</Link>
+          <div className='flex md:justify-around md:w-1/6 w-2/5 justify-evenly'>
+            <Link href={"/auth-server-action"} className='bg-black px-2 rounded-xl text-blue-400 hover:bg-slate-500'>Login/Signup</Link>
           </div>
         </div>
         <div className='flex justify-center flex-col items-center md:flex-row'>
